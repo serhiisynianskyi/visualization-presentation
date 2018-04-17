@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Visualization presentation | Serhii Synianskyi about WebGL</title>
+	<meta content="Visualization presentation" name="description">
+	<meta name="author" content="Serhii Synianskyi">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="styles/reveal.css">
+	<link rel="stylesheet" href="styles/blood.css" id="theme">
+	<link href="styles/styles.css" media="all" rel="stylesheet" type="text/css">
+	<link href="assets/favicon.png" rel="shortcut icon">
+	
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Slide1</h1>
+				<p>Some data</p>
+			</section>
+			<section>
+				<h1>Slide2</h1>
+			</section>
+			<section>
+				<h1>Slide3</h1>
+			</section>
+		</div>
+	</div>
+	<script src="js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script>
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+		transition: 'fade', // none/fade/slide/convex/concave/zoom
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/search/search.js', async: true },
+			{ src: 'plugin/zoom-js/zoom.js', async: true }
+		]
+	});
+	</script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
