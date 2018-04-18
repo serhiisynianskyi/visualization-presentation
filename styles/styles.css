@@ -1,0 +1,28 @@
+.first-slide {
+	background: url("../assets/background.jpg") 0 0 / 0 0;
+}
+
+.slides .first-slide h1 {
+	font-size: 3em;
+	text-shadow: 10px 10px 2em black;
+}
+
+.highlight {
+	color: #b00;
+}
+
+.reveal p {
+	margin-bottom: 50px;
+}
+
+.reveal section img {
+	background: none;
+	box-shadow: none;
+	border: none;
+}
+
+.reveal .flex-wrapper {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 70px;
+}
