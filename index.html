@@ -13,7 +13,6 @@
 	<link rel="stylesheet" href="styles/blood.css" id="theme">
 	<link href="styles/styles.css" media="all" rel="stylesheet" type="text/css">
 	<link href="assets/favicon.png" rel="shortcut icon">
-	
 </head>
 
 <body>
@@ -35,13 +34,14 @@
 			<section>
 				<h2>IT IS ONLY PIXELS</h2>
 			</section>
-			<section id="fragments">
-				<p >Most of engineers who don’t know WebGL would answer that it is interface for using 3D on browser.</p>
+			<section>
+				<p>Most of engineers who don’t know WebGL would answer that it is interface for using 3D on browser.</p>
 				<p class="fragment">But, that is incorrect. Most important part of WebGL is <span class="highlight">That is interface for using GPU on browser</span>.</p>
 				<p class="fragment">Of course, GPU is mostly used for graphics stuff including 3D. But, the possibility is not so limited.</p>
 			</section>
-			<section>
-				<p>To  <span class="highlight">do fast graphics</span>,<br> you really need the  <span class="highlight">parallel processing</span> power.</p>
+			<section >
+				<p>To <span class="highlight">do fast graphics</span>,
+					<br> you really need the <span class="highlight">parallel processing</span> power.</p>
 				<div class="flex-wrapper">
 					<div>
 						<p>Multiple cores</p>
@@ -51,10 +51,83 @@
 						<p>Thousands of cores</p>
 						<img alt="CPU vs GPU" src="assets/gpu.png">
 					</div>
-					
 				</div>
 				
 			</section>
+			<section class="history">
+				<div class="history-first">
+					<img alt="KhronosLogo" src="assets/KhronosLogo.png">
+				</div>
+				<div class="fragment history-second">
+					<img class="arrow" alt="arrow" src="assets/arrow.png">
+					<img class="desc" alt="openGL" src="assets/openGL_logo.svg">
+				</div>
+				<div class="fragment history-third">
+					<div class="inner-history">
+						<img class="arrow" alt="arrow" src="assets/arrow.png">
+						<img class="desc" alt="openGL" src="assets/h1.jpg">
+					</div>
+					<div class="inner-history">
+						<img class="arrow" alt="arrow" src="assets/arrow.png">
+						<img class="desc" alt="openGL" src="assets/h2.jpg">
+					</div>
+					<div class="inner-history">
+						<img class="arrow" alt="arrow" src="assets/arrow.png">
+						<img class="desc" alt="openGL" src="assets/h3.jpg">
+					</div>
+				</div>
+				<!-- <img alt="gif" src="assets/gif/1.gif" class="gif-animation-1"> -->
+			</section>
+			<section class="es-wrapper">
+				<h3>Evolution into the WEB</h3>
+				<div>
+					<img class="inner-logo fragment current-visible visible-fragment" alt="openGL" src="assets/openGL_logo.svg">
+					<div class="fragment es-logo">
+						<img alt="openGL" src="assets/OpenGL_ES_logo.png">
+						<p>OpenGL for Embedded Systems </p>
+					</div>	
+				</div>
+			</section>
+			<section>
+				<h3>Versions</h3>
+				<div class="es-wrapper">
+					<div class="inner-es">
+						<img alt="openGL" src="assets/es2.png">
+						<img class="arrow" alt="openGL" src="assets/arrow.png">
+						<img alt="openGL" src="assets/w1.png">
+					</div>
+					<div class="inner-es">
+						<img alt="openGL" src="assets/es3.png">
+						<img class="arrow" alt="openGL" src="assets/arrow.png">
+						<img alt="openGL" src="assets/w2.png">
+					</div>
+				</div>
+			</section>
+			<section class="support">
+				<h3>Browsers support</h3>
+				<img alt="openGL" src="assets/sup1.jpg">
+				<img class="fragment" alt="openGL" src="assets/sup2.jpg">
+			</section>
+			<section class="usecases video-slide" data-background-video="assets/WebGL.mp4" data-background-video-loop data-background-video-muted>
+				<h4>WEB GL practical application</h4>
+				<ul>
+					<li class="fragment">Maps (3d maps, panoramas, interactions maps navigation)</li>
+					<li class="fragment">Constructors</li>
+					<li class="fragment">Data visualization</li>
+					<li class="fragment">Games</li>
+					<li class="fragment">Marketing, education, healthcare therapy</li>
+					<li class="fragment">VR, AR, XR, MR ...</li>
+				</ul>
+			</section>
+			<section class="demo">
+				<iframe  src="https://www.markuslerner.com/travelscope/"></iframe>
+				<a href="https://www.markuslerner.com/travelscope/">https://www.markuslerner.com</a>
+			</section>
+			<section class="demo">
+				<iframe  src="https://www.gsmlondon.ac.uk/global-oil-map/#2008-importers-528"></iframe>
+				<a href="https://www.gsmlondon.ac.uk/global-oil-map/#2008-importers-528">https://www.gsmlondon.ac.uk/global-oil-map</a>
+			</section>
+
 		</div>
 	</div>
 	<script src="js/head.min.js"></script>
@@ -65,6 +138,7 @@
 		progress: true,
 		history: true,
 		center: true,
+		width: "100%",
 		transition: 'fade', // none/fade/slide/convex/concave/zoom
 		dependencies: [
 			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
