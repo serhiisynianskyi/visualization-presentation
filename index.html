@@ -18,12 +18,12 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section class="first-slide">
+			<section class="first-slide" data-background-image="assets/background.jpg">
 				<h1>VISUALIZATION</h1>
 			</section>
 			<section>
-				<p>The user interface (UI) is everything designed into the product <span class="highlight">with which a person may interact</span>.</p>
-				<p>The user experience (UX) encompasses all aspects of the <span class="highlight">end-user’s interaction with the products</span>.</p>
+				<p>The user interface (UI) is everything designed into the product <span class="highlight"><br>with which a person may interact</span>.</p>
+				<p>The user experience (UX) encompasses all aspects of the <span class="highlight"><br>end-user’s interaction with the products</span>.</p>
 			</section>
 			<section>
 				<h4>How can we reach a new level?</h4>
@@ -35,9 +35,9 @@
 				<h2>IT IS ONLY PIXELS</h2>
 			</section>
 			<section>
-				<p>Most of engineers who don’t know WebGL would answer that it is interface for using 3D on browser.</p>
-				<p class="fragment">But, that is incorrect. Most important part of WebGL is <span class="highlight">That is interface for using GPU on browser</span>.</p>
-				<p class="fragment">Of course, GPU is mostly used for graphics stuff including 3D. But, the possibility is not so limited.</p>
+				<p>Most of engineers who don’t know WebGL would answer <br>that it is interface for using 3D on browser.</p>
+				<p class="fragment"><br>But, that is incorrect. Most important part of WebGL is <span class="highlight"><br>That is interface for using GPU on browser</span>.</p>
+				<p class="fragment">Of course, GPU is mostly used for graphics stuff including 3D.<br> But, the possibility is not so limited.</p>
 			</section>
 			<section >
 				<p>To <span class="highlight">do fast graphics</span>,
@@ -120,14 +120,94 @@
 				</ul>
 			</section>
 			<section class="demo">
-				<iframe  src="https://www.markuslerner.com/travelscope/"></iframe>
+				<!-- <iframe  src="https://www.markuslerner.com/travelscope/"></iframe> -->
 				<a href="https://www.markuslerner.com/travelscope/">https://www.markuslerner.com</a>
 			</section>
 			<section class="demo">
-				<iframe  src="https://www.gsmlondon.ac.uk/global-oil-map/#2008-importers-528"></iframe>
+				<!-- <iframe  src="https://www.gsmlondon.ac.uk/global-oil-map/#2008-importers-528"></iframe> -->
 				<a href="https://www.gsmlondon.ac.uk/global-oil-map/#2008-importers-528">https://www.gsmlondon.ac.uk/global-oil-map</a>
 			</section>
+			<section class="demo">
+				<!-- <iframe  src="http://labs.web3d.co/_tesla3/"></iframe> -->
+				<a href="http://labs.web3d.co/_tesla3/">http://labs.web3d.co/_tesla3/</a>
+			</section>
+			<section class="" data-background-image="assets/gif/background1.gif">
+				<h2>How it works?</h2>
+			</section>
+			<section class="" data-background-image="assets/gif/background1.gif">
+				<div class="work-graph">
+					<img alt="html" src="assets/html.png">
+					<img alt="js" src="assets/js.png">
+					<p>GLSL</p>
+				</div>
+			</section>
+			<section class="" data-background-image="assets/gif/background1.gif">
+				<h1>GLSL</h1>
+				<h3>(OpenGL Shading Language)</h3>
+			</section>
+			<section class="glsl-features">
+				<h3>GLSL features</h3>
+				<ul>
+					<li class="fragment">A part of WEBGL</li>
+					<li class="fragment">Compiles on CPU</li>
+					<li class="fragment">Cross platform</li>
+					<li class="fragment">C syntax</li>
+					<li class="fragment">Strict typing (float, integer, boolean, vec2, vec3, vec4, mat2, mat3, mat4, sampler2D)</li>
+					<li class="fragment">Design for math</li>
+				</ul>
+			</section>
+			<section class='pipeline' data-background-color="#000">
+				<h3>OPENGL pipeline with GLSL</h3>
+				<div class="inner-wrapper">
+					<div class="description">
+						<p>Vertices</p>
+						<p><b>Vertex<br> Shader</b></p>
+						<p>Primitives<br> Generator</p>
+						<p>Rasterization</p>
+						<p><b>Fragment<br> Shader</b></p>
+						<p>Testing<br> Blending</p>
+						<p>FrameBuffer</p>
+					</div>
+					<div class="back-pipeline"></div>
+				</div>
+			</section>
+			<section data-background-image="assets/300.jpg" >
+			</section>
+			<section>
+				<p>Some code</p>
+			</section>
+			<section class="video-slide frameworks" data-background-image="assets/gif/tech.gif" >
+				<h3>How to make it easier?</h3>
+				<div class="inner-wrapper">
+					<div class="inner-item">
+						<img class="framework-logo" alt="logo" src="assets/babylonjs.svg">
+						<p>Babylon.js</p>
+					</div>
+					<div class="inner-item">
+						<img class="framework-logo" alt="logo" src="assets/aframe.png">
+						<p>A-Frame</p>
+					</div>
+					<div class="inner-item">
+						<img class="framework-logo" alt="logo" src="assets/three.png">
+						<p>Three.js</p>
+					</div>
+				</div>
+			</section>
+			<section class="video-slide good-parts" data-background-image="assets/three-back.png" >
+				<h2>Why Three.js ?</h2>
+				<ul>
+					<li>Performs for us a low-level work on WEBGL</li>
+					<li>Strong community and a lot of good examples</li>
+					<li>Understandable structure and wide opportunities for adjustment</li>
+				</ul>
+			</section>
 
+			<section class="video-slide dark-video last-one" data-background-image="assets/last-demo.gif" >
+				<div class="inner-demo">
+					<h2>Last but not least</h2>
+					<h1>Demo</h1>
+				</div>
+			</section>
 		</div>
 	</div>
 	<script src="js/head.min.js"></script>

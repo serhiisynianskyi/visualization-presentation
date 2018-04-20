@@ -7,10 +7,6 @@ body {
 	box-sizing: border-box;
 }
 
-.first-slide {
-	background: url("../assets/background.jpg") 0 0 / 0 0;
-}
-
 .slides .first-slide h1 {
 	font-size: 3em;
 	text-shadow: 10px 10px 2em black;
@@ -45,6 +41,10 @@ div.video-slide:before{
 	height: 100%;
 	background: rgba(0,0,0,0.9);
 	z-index: 1;
+}
+
+.video-slide.dark-video:before {
+	background: rgba(0,0,0,0.8);
 }
 
 .history-second,
@@ -177,6 +177,118 @@ div.video-slide:before{
 
 .reveal .slides .demo a {
 	position: relative;
+}
+
+.work-graph {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.work-graph img {
+	width: 30%;
+}
+
+.work-graph p {
+	font-weight: 700;
+	font-size: 10rem;
+}
+
+.reveal .slides section.pipeline {
+	padding: 0 5%;
+}
+
+.pipeline .inner-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.pipeline .description {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pipeline .top-wrapper {
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
+}
+
+.pipeline .top-wrapper p {
+	width: 100%;
+	margin: 10px;
+	text-align: left;
+}
+
+.pipeline .back-pipeline {
+	width: 100%;
+	height: 20rem;
+	background: url("../assets/pipeline.jpg") 0 0 / 100% auto no-repeat;
+}
+
+.pipeline h3 {
+	margin-bottom: 3rem;
+}
+
+.pipeline .description p{
+	width: 9%;
+	font-size: 1.5rem;
+}
+
+.pipeline .description p:last-of-type{
+	width: 17%;
+}	
+
+.framework-logo {
+	height: 20%;
+}
+
+.frameworks .inner-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	align-items: stretch;
+}
+
+.frameworks .inner-item {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.frameworks h3{
+	margin-bottom: 70px;
+}
+
+.frameworks .inner-item .framework-logo{
+	height: auto;
+}
+
+.frameworks .inner-item:first-of-type .framework-logo{
+	margin-top: 60px;
+	width: 100%;
+}
+
+.frameworks .inner-item:nth-of-type(2) .framework-logo{
+	width: 60%;
+}
+
+.frameworks .inner-item:last-of-type .framework-logo{
+	width: 50%;
+}
+
+.good-parts li{
+	margin: 30px 0;
+}
+
+.last-one .inner-demo {
+	text-align: left;
+	margin-top: 20%;
 }
 
 /*//////////////////////// - custom gifs*/
