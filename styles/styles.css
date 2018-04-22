@@ -46,6 +46,15 @@ div.video-slide:before{
 .video-slide.dark-video:before {
 	background: rgba(0,0,0,0.8);
 }
+.video-slide.softdark-video:before {
+	background: rgba(0,0,0,0.7);
+}
+
+.video-slide.light-video:before {
+	background: rgba(255,255,255,0.6);
+}
+
+
 
 .history-second,
 .inner-history {
@@ -286,17 +295,79 @@ div.video-slide:before{
 	margin: 30px 0;
 }
 
-.last-one .inner-demo {
-	text-align: left;
+.reveal .dark-text {
+	color: black;
+}
+
+.reveal .leap1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.reveal .leap1 {
+	width: 35%;
+	max-height: inherit;
+}
+
+.reveal .leap1.device {
+	width: 100%;
+}
+
+.reveal .vr-problems li{
+	margin: 20px 0;
+	font-size: 2.6rem;
+	font-weight:700;
+	opacity:0;
+	transition: all 1s ease-in-out;
+}
+
+.reveal section .reason {
+	height: 42rem;
+	margin: 0;
+}
+
+.reveal section.slow-js {
+	padding-top: 13rem;
+}
+
+.reveal .slow-js h1{
+	font-size: 6rem;
+}
+
+.video-slide.conclusion h3{
+	margin-top: 30rem
+}
+
+.vr-problems .visible li {
+	opacity: 1;
+}
+
+.vr-problems li:first-of-type{
+	transition-delay: 0.5s;
+}
+
+.vr-problems li:nth-of-type(2){
+	transition-delay: 1s;
+}
+
+.vr-problems li:nth-of-type(3){
+	transition-delay: 1.5s;
+}
+
+.vr-problems li:nth-of-type(4){
+	transition-delay: 2s;
+}
+
+.vr-problems li:nth-of-type(5){
+	transition-delay: 2.5s;
+}
+
+.last-demo .inner-demo {
+	/*text-align: left;*/
 	margin-top: 20%;
 }
 
-/*//////////////////////// - custom gifs*/
-.gif-animation-1 {
-	position: absolute;
-	right: 70%;
-	bottom: 20%;
-	width: 650px;
-	transform: rotate(30sdeg);
-	z-index: -1;
-}
