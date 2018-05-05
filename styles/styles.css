@@ -1,5 +1,18 @@
 body {
-	background: radial-gradient(#222 25%, #000 );
+	/*background: radial-gradient(#222 25%, #000 );*/
+	background-size: cover;
+}
+
+.reveal {
+	font-family: Arial;
+}
+
+section.light-theme p,
+section.light-theme h1,
+section.light-theme h2,
+section.light-theme h3,
+section.light-theme h4{
+	color: #000;
 }
 
 .reveal .slides section {
@@ -12,9 +25,7 @@ body {
 	text-shadow: 10px 10px 2em black;
 }
 
-.highlight {
-	color: #b00;
-}
+
 
 .reveal p {
 	margin-bottom: 50px;
@@ -371,3 +382,11 @@ div.video-slide:before{
 	margin-top: 20%;
 }
 
+* {
+	text-shadow: none !important;
+}
+
+.highlight {
+	color: #b00;
+	font-weight: 700 !important;
+}
