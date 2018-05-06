@@ -1,5 +1,5 @@
 body {
-	/*background: radial-gradient(#222 25%, #000 );*/
+	background: url('../assets/white-background.jpg');
 	background-size: cover;
 }
 
@@ -7,11 +7,12 @@ body {
 	font-family: Arial;
 }
 
-section.light-theme p,
-section.light-theme h1,
-section.light-theme h2,
-section.light-theme h3,
-section.light-theme h4{
+.light-theme p,
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4,
+.light-theme li{
 	color: #000;
 }
 
@@ -23,6 +24,8 @@ section.light-theme h4{
 .slides .first-slide h1 {
 	font-size: 3em;
 	text-shadow: 10px 10px 2em black;
+	color: #fff;
+	white-space: nowrap;
 }
 
 
@@ -62,10 +65,27 @@ div.video-slide:before{
 }
 
 .video-slide.light-video:before {
-	background: rgba(255,255,255,0.6);
+	background: linear-gradient(to bottom,rgba(255,255,255,0.9), rgba(255,255,255,0.8) 40%);
+}
+.video-slide.soft-light-video:before {
+	background: rgba(255,255,255,0.7);
+}
+.video-slide.gray-video:before {
+	background: rgba(255,255,255,0.45);
 }
 
+.reveal .demo.past iframe,
+.reveal .demo.future iframe{
+	display: none !important;
+} 
+.reveal .demo.present iframe{
+	display: block;
+}
 
+.reveal .north-star {
+	color: #fff;
+	color: #c00;
+}
 
 .history-second,
 .inner-history {
@@ -165,7 +185,7 @@ div.video-slide:before{
 
 .reveal .support img:nth-of-type(2){
 	position: absolute;
-	top: 16.5%;
+	top: 13.5%;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -246,7 +266,7 @@ div.video-slide:before{
 .pipeline .back-pipeline {
 	width: 100%;
 	height: 20rem;
-	background: url("../assets/pipeline.jpg") 0 0 / 100% auto no-repeat;
+	background: url("../assets/pipeline1.png") 0 0 / 100% auto no-repeat;
 }
 
 .pipeline h3 {
@@ -347,10 +367,22 @@ div.video-slide:before{
 
 .reveal .slow-js h1{
 	font-size: 6rem;
+	color: #fff;
 }
 
-.video-slide.conclusion h3{
-	margin-top: 30rem
+
+.reveal .slow-js h3{
+	color: #fff;
+}
+
+.reveal .mem h1{
+	margin-top: 35%;
+	color: #fff;
+}
+
+.video-slide.conclusion h2{
+	margin-top: 30rem;
+	white-space: nowrap;
 }
 
 .vr-problems .visible li {
@@ -386,7 +418,7 @@ div.video-slide:before{
 	text-shadow: none !important;
 }
 
-.highlight {
-	color: #b00;
+.reveal .highlight {
+	color: #922;
 	font-weight: 700 !important;
 }
