@@ -28,8 +28,6 @@ body {
 	white-space: nowrap;
 }
 
-
-
 .reveal p {
 	margin-bottom: 50px;
 }
@@ -68,7 +66,7 @@ div.video-slide:before{
 	background: linear-gradient(to bottom,rgba(255,255,255,0.9), rgba(255,255,255,0.8) 40%);
 }
 .video-slide.soft-light-video:before {
-	background: rgba(255,255,255,0.7);
+	background: rgba(255,255,255,0.6);
 }
 .video-slide.gray-video:before {
 	background: rgba(255,255,255,0.45);
@@ -286,6 +284,40 @@ div.video-slide:before{
 	height: 20%;
 }
 
+.choose-demo {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	opacity: 0.7;
+}
+
+.future .choose-demo .inner-demo,
+.past .choose-demo .inner-demo {
+	opacity: 0;
+}
+.choose-demo .inner-demo {	
+	width: 350px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	color: #000;
+}
+
+.present .choose-demo .inner-demo {
+	transition: 2s all ease-in-out 30s;
+	opacity: 1;
+}
+
+.inner-demo:first-of-type {
+	background: #14398d;
+}
+
+.inner-demo:last-of-type {
+	background: #9e1ac4;
+}
+
 .frameworks .inner-wrapper {
 	display: flex;
 	justify-content: center;
@@ -330,21 +362,34 @@ div.video-slide:before{
 	color: black;
 }
 
-.reveal .leap1 {
+.reveal .leap1,
+.reveal .leap2 {
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	margin: auto;
+	margin-top: 8%;
 }
 
 .reveal .leap1 {
-	width: 35%;
+	width: 80%;
 	max-height: inherit;
 }
 
-.reveal .leap1.device {
+.reveal h3.leap1{
+	margin-top: 15%;
+}	
+
+.reveal .leap2 {
+	width: 55%;
+	max-height: inherit;
+	margin-top: 0;
+}	
+
+.reveal .leap1.device,
+.reveal .leap2.device {
 	width: 100%;
 }
 
@@ -412,6 +457,21 @@ div.video-slide:before{
 .last-demo .inner-demo {
 	/*text-align: left;*/
 	margin-top: 20%;
+	background: none;
+}
+
+.reality-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.text-wrapper,
+.reality {
+	width: 50%;
+}
+
+.text-wrapper p {
+	font-weight: 700;
 }
 
 * {
