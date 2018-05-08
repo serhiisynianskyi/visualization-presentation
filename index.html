@@ -171,8 +171,52 @@
 			</section>
 			<section data-background-image="assets/300.jpg"  >
 			</section>
-			<section>
-				<p>(TODO)<br>Some code</p>
+			<section data-background-color="#fff">
+				<pre>
+					<code class="hljs" data-trim contenteditable>
+						let vertexShaderSource =
+							`void main()
+							{
+								gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
+								gl_PointSize = 40.0;
+							}`
+
+						let fragmentShaderSource =
+							`void main()
+							{
+								gl_FragColor = vec4(0.0, 0.0, 1.0, 1.0);
+							}`;
+					</code>
+				</pre>
+				<pre>
+					<code class="hljs" data-trim contenteditable>
+						function main() {
+							let canvas = document.getElementById('main-wrapper'),
+								gl = canvas.getContext('webgl');
+							canvas.height = gl.canvas.clientHeight;
+							canvas.width = gl.canvas.clientWidth;
+
+							gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+
+							let vShader = gl.createShader(gl.VERTEX_SHADER);
+							gl.shaderSource(vShader, vertexShaderSource);
+							gl.compileShader(vShader);
+
+							let fShader = gl.createShader(gl.FRAGMENT_SHADER);
+							gl.shaderSource(fShader, fragmentShaderSource);
+							gl.compileShader(fShader);
+
+							let program = gl.createProgram();
+							gl.attachShader(program, vShader);
+							gl.attachShader(program, fShader);
+							gl.linkProgram(program);
+							gl.useProgram(program);
+
+							gl.drawArrays(gl.POINTS, 0, 1);
+						}
+						main();
+					</code>
+				</pre>
 			</section>
 			<section class='mem' data-background-image="assets/gif/wtf1.gif">
 				<h1>WTF?</h1>
