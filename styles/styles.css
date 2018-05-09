@@ -470,6 +470,51 @@ div.video-slide:before{
 	width: 50%;
 }
 
+.reveal .slides .glsl-code,
+.reveal .slides .three-code{
+	padding: 0;
+}
+
+.reveal pre {
+	font-size: 0.45em;
+}
+
+.glsl-code .code-wrapper,
+.three-code .code-wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+
+.glsl-code pre:first-of-type{
+	width: 55%;
+}
+
+.glsl-code pre:last-of-type{
+	width: 45%;
+}
+
+
+.reveal .three-code pre {
+	font-size: 0.27em;
+}
+
+
+.glsl-code pre code,
+.three-code pre code{
+	max-height: 100%;
+	color: #000;
+}
+
+.glsl-code pre:first-of-type{
+	height: 35em;
+	width: 60%;
+}
+
+.glsl-code pre:last-of-type{
+	height: 35em;
+	width: 40%;
+}
+
 .text-wrapper p {
 	font-weight: 700;
 }
