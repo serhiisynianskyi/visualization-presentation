@@ -171,59 +171,22 @@
 			</section>
 			<section data-background-image="assets/300.jpg"  >
 			</section>
-			<section class="glsl-code" >
+			<section class="glsl-code"  data-background-color="#f9fbfa">
 				<div class="code-wrapper">
-					<pre><code class="hljs" data-trim contenteditable>
-						function main() {
-						  const canvas = document.getElementById('main-wrapper'),
-						  gl = canvas.getContext('webgl');
-						  canvas.height = gl.canvas.clientHeight;
-						  canvas.width = gl.canvas.clientWidth;
-
-						  gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-
-						  let vShader = gl.createShader(gl.VERTEX_SHADER);
-						  gl.shaderSource(vShader, vertexShaderSource);
-						  gl.compileShader(vShader);
-
-						  let fShader = gl.createShader(gl.FRAGMENT_SHADER);
-						  gl.shaderSource(fShader, fragmentShaderSource);
-						  gl.compileShader(fShader);
-
-						  let program = gl.createProgram();
-						  gl.attachShader(program, vShader);
-						  gl.attachShader(program, fShader);
-						  gl.linkProgram(program);
-						  gl.useProgram(program);
-
-						  gl.drawArrays(gl.POINTS, 0, 1);
-						}
-						main();
-					</code>
-				</pre>
-				<pre>
-					<code class="hljs" data-trim contenteditable>
-						const vertexShaderSource =
-						 `void main()
-						 {
-						  gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
-						  gl_PointSize = 40.0;
-						 }`
-
-						const fragmentShaderSource =
-						 `void main()
-						 {
-						  gl_FragColor = vec4(0.0, 0.0, 1.0, 1.0);
-						 }`;
-					</code>
-				</pre>
+					<img class="code" alt="code" src="assets/glsl-code1.jpg">
+					<img class="code" alt="code" src="assets/glsl-code2.jpg">
 				</div>
 			</section>
 			<section class='glsl-point' data-background-color="#fff">
 				<div class="glsl-demo-point	"></div>
 			</section>
+			<section class='glsl-point' data-background-color="#f9fbfa">
+				<img class="glsl-bad-code" alt="code" src="assets/badglsl.jpg">
+			</section>
 			<section class='mem' data-background-image="assets/gif/wtf1.gif">
 				<h1>WTF?</h1>
+			</section>
+			<section class='glsl-point' data-background-image="assets/gif/giphy.gif">
 			</section>
 			<section class="video-slide light-video frameworks" data-background-image="assets/gif/12.gif">
 				<h3 class='highlight'>How to make it easier?</h3>
@@ -253,109 +216,10 @@
 			<section  >
 				<img  alt="logo" src="assets/scenegraph.png">
 			</section>
-			<section class="three-code" >
+			<section class="three-code" data-background-color="#f9fbfa">
 				<div class="code-wrapper">
-					<pre><code class="hljs" data-trim contenteditable>
-					  let canvas = document.getElementById('canvas'),
-					    scene, camera, renderer, light, controls, rotationCoefficient = 0;
-
-					  function initScene() {
-					    camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 10000);
-					    renderer = new THREE.WebGLRenderer({ antialias: true, canvas: canvas });
-					    camera.position.set(200, 100, 100);
-					    renderer.shadowMap.enabled = true;
-					    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-					    renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
-					    renderer.setSize(window.innerWidth, window.innerHeight);
-					    renderer.gammaInput = renderer.gammaOutput = true;
-					    renderer.toneMapping = THREE.LinearToneMapping;
-					    renderer.setClearColor(0x000000);
-					    scene = new THREE.Scene()
-					  }
-
-					  function addLights() {
-					    let light = new THREE.DirectionalLight(0xdfebff, 1),
-					    lightDistance = 400;
-					    light.position.set(200, 300, -250);
-					    light.castShadow = true;
-					    light.shadow.mapSize.width = 512;
-					    light.shadow.mapSize.height = 512;
-					    light.shadow.camera.left = -lightDistance;
-					    light.shadow.camera.right = lightDistance;
-					    light.shadow.camera.top = lightDistance;
-					    light.shadow.camera.bottom = -lightDistance;
-					    light.shadow.camera.far = 800;
-					    scene.add(new THREE.AmbientLight(0xffffff, 1));
-					    scene.add(light);
-					  }
-
-					  function rendering() {
-					    requestAnimationFrame(rendering);
-					    renderer.render(scene, camera);
-					    animate(scene);
-					  };
-
-					  function animate(scene) {
-					    scene.children[2].position.x = Math.sin(rotationCoefficient * 1) * 50;
-					    scene.children[2].position.z = Math.cos(rotationCoefficient * 1) * 50;
-					    scene.children[2].rotation.z += 0.1;
-					    scene.children[2].rotation.y += 0.05;
-					    rotationCoefficient += Math.PI / 180 * 2;
-					  }
-					</code>
-				</pre>
-				<pre>
-					<code class="hljs" data-trim contenteditable>
-						let objects = {
-						  cube: {
-						    geometry: new THREE.CubeGeometry(30, 30, 30, 10, 10, 10),
-						    material: new THREE.MeshStandardMaterial({
-						      emissive: 0.2,
-						      metalness: 0.9,
-						      color: 0xff2233
-						    }),
-						    position: [30, 30, 10]
-						  },
-						  sphere: {
-						    geometry: new THREE.SphereGeometry(10, 32, 32),
-						    material: new THREE.MeshStandardMaterial({
-						      emissive: 0.1,
-						      metalness: 0.73,
-						      color: 0x008888
-						    }),
-						    position: [0, 20, 0]
-						  },
-						  plane: {
-						    geometry: new THREE.PlaneGeometry(200, 200, 2).applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI / 2)),
-						    material: new THREE.MeshStandardMaterial({
-						      emissive: 0.6,
-						      color: 0x333333
-						    }),
-						    position: [0, 0, 0]
-						  }
-						}
-						function createMesh(element) {
-						  let elementMesh = new THREE.Mesh(element.geometry, element.material);
-						    elementMesh.castShadow = true;
-						    elementMesh.receiveShadow = true;
-						    elementMesh.position.set(...element.position)
-						  scene.add(elementMesh)
-						}
-
-						function createElements() {
-						  for (let mesh in objects) {
-						    createMesh(objects[mesh]);
-						  }
-						}
-
-						initScene();
-						addLights();
-						createElements();
-						rendering();
-
-						controls = new THREE.OrbitControls(camera);
-					</code>
-				</pre>
+					<img class="code" alt="mem" src="assets/three-code1.jpg">
+					<img class="code" alt="mem" src="assets/three-code2.jpg">
 				</div>
 			</section>
 			<section data-background-image="assets/three.jpg">

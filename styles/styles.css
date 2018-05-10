@@ -69,7 +69,7 @@ div.video-slide:before{
 	background: rgba(255,255,255,0.6);
 }
 .video-slide.gray-video:before {
-	background: rgba(255,255,255,0.45);
+	background: rgba(255,255,255,0.35);
 }
 
 .reveal .demo.past iframe,
@@ -475,8 +475,17 @@ div.video-slide:before{
 	padding: 0;
 }
 
-.reveal pre {
-	font-size: 0.45em;
+.reveal section .glsl-bad-code {
+	width:75%;
+	margin-top: -10%;
+}
+
+.glsl-point .glsl-demo-point {
+	width: 40px;
+	height: 40px;
+	background: #00f;
+	text-align: center;
+	margin: auto; 
 }
 
 .glsl-code .code-wrapper,
@@ -485,34 +494,10 @@ div.video-slide:before{
 	justify-content: space-between;
 }
 
-.glsl-code pre:first-of-type{
-	width: 55%;
-}
-
-.glsl-code pre:last-of-type{
-	width: 45%;
-}
-
-
-.reveal .three-code pre {
-	font-size: 0.27em;
-}
-
-
-.glsl-code pre code,
-.three-code pre code{
-	max-height: 100%;
-	color: #000;
-}
-
-.glsl-code pre:first-of-type{
-	height: 35em;
-	width: 60%;
-}
-
-.glsl-code pre:last-of-type{
-	height: 35em;
-	width: 40%;
+.glsl-code .code-wrapper .code,
+.three-code .code-wrapper .code{
+	width: 50%;
+	height: 100%;
 }
 
 .text-wrapper p {
